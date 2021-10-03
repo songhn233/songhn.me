@@ -1,0 +1,32 @@
+button:
+  about: About
+  back: Back
+  go: GO
+  home: Home
+  share: Share this card
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+card:
+  about:
+    alo: Algorithm Enthusiast
+    gra: Undergraduate student in CS
+    title: WHO AM I ?
+    web: Web Developer Newbie
+  contact:
+    title: HOW TO CONTACT ME ?
+  love:
+    content: 📈 Visualization, 📺 Anime, 💬 Chat
+    title: INTERESTED IN ?
+  plain:
+    hello: 'Hello, '
+    me: I'm Songhn
+  status:
+    content: 👨‍💻 Intern, 🎨 Learning UI & UX
+    title: CURRENT STATE ?
+intro:
+  aka: Also known as
+  desc: Opinionated Vite Starter Template
+  dynamic-route: Demo of dynamic route
+  hi: Hi, {name}!
+  whats-your-name: What's your name?
+not-found: The page is not found, will be returned to the home page ...
