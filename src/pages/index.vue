@@ -153,19 +153,56 @@ const handleShare = () => {
           </li>
         </ul>
       </p>
-      <h2 v-motion-slide-left class="font-semibold text-lg mb-4 mt-6" :delay="14" :hovered="{}">
+      <h2
+        v-motion
+        :initial="{
+          x: -100,
+          opacity: 0,
+        }"
+        :enter="{
+          x: 0,
+          opacity: 1,
+        }"
+        class="font-semibold text-lg mb-4 mt-6"
+        :delay="14"
+        :hovered="{}"
+      >
         {{ t('card.love.title') }}
       </h2>
       <p v-motion-pop :delay="8">
         {{ t('card.love.content') }}
       </p>
-      <h2 v-motion-slide-left class="font-semibold text-lg mb-4 mt-6" :delay="14">
+      <h2
+        v-motion
+        :initial="{
+          x: -100,
+          opacity: 0,
+        }"
+        :enter="{
+          x: 0,
+          opacity: 1,
+        }"
+        class="font-semibold text-lg mb-4 mt-6"
+        :delay="14"
+      >
         {{ t('card.status.title') }}
       </h2>
       <p v-motion-pop :delay="8">
         {{ t('card.status.content') }}
       </p>
-      <h2 v-motion-slide-left class="font-semibold text-lg mb-3 mt-6" :delay="14">
+      <h2
+        v-motion
+        :initial="{
+          x: -100,
+          opacity: 0,
+        }"
+        :enter="{
+          x: 0,
+          opacity: 1,
+        }"
+        class="font-semibold text-lg mb-3 mt-6"
+        :delay="14"
+      >
         {{ t('card.contact.title') }}
       </h2>
       <nav v-motion-pop class="text-base" :delay="14">
