@@ -38,6 +38,6 @@ html.dark {
 .icon-btn {
   @apply inline-block cursor-pointer select-none
     opacity-75 transition duration-200 ease-in-out
-    hover:opacity-100 hover:text-cyan-500;
+    hover:opacity-100 hover:text-cyan-500 focus:opacity-100 focus:text-cyan-500;
   font-size: 1.1em;
 }

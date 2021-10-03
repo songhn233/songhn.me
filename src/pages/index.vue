@@ -89,11 +89,13 @@ const handleShare = () => {
           </button>
 
           <a
-            class="icon-btn mx-4"
+            class="icon-btn mx-4 !outline-none"
             :title="t('button.toggle_langs')"
             data-aos="flip-left"
             data-aos-delay="200"
             data-aos-duration="800"
+            tabindex="0"
+            role="button"
             @click="toggleLocales"
           >
             <carbon-language />
@@ -156,7 +158,7 @@ const handleShare = () => {
         </h2>
         <nav class="text-base">
           <a
-            class="icon-btn mx-2"
+            class="icon-btn mx-2 !outline-none"
             rel="noreferrer"
             href="https://blog.songhn.com"
             target="_blank"
@@ -165,7 +167,7 @@ const handleShare = () => {
             <carbon-edit />
           </a>
           <a
-            class="icon-btn mx-2"
+            class="icon-btn mx-2 !outline-none"
             rel="noreferrer"
             href="mailto:songhn233@gmail.com"
             target="_blank"
@@ -174,7 +176,7 @@ const handleShare = () => {
             <carbon-email-new />
           </a>
           <a
-            class="icon-btn mx-2"
+            class="icon-btn mx-2 !outline-none"
             rel="noreferrer"
             href="https://github.com/songhn233"
             target="_blank"
@@ -183,7 +185,7 @@ const handleShare = () => {
             <iconoir-github />
           </a>
           <a
-            class="icon-btn mx-2"
+            class="icon-btn mx-2 !outline-none"
             rel="noreferrer"
             href="https://www.zhihu.com/people/song-nan-80-71"
             target="_blank"
