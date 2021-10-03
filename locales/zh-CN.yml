@@ -1,11 +1,3 @@
-button:
-  about: 关于
-  back: 返回
-  go: 确定
-  home: 首页
-  share: 分享这个链接
-  toggle_dark: 切换深色模式
-  toggle_langs: 切换语言
 card:
   about:
     alo: 算法爱好者
@@ -23,10 +15,3 @@ card:
   status:
     content: 👨‍💻 实习中，🎨 想学设计
     title: 当前状态？
-intro:
-  aka: 也叫
-  desc: 固执己见的 Vite 项目模板
-  dynamic-route: 动态路由演示
-  hi: 你好，{name}
-  whats-your-name: 输入你的名字
-not-found: 页面未找到，即将回到首页 ...
