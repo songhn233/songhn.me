@@ -13,6 +13,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
+import Compression from 'vite-plugin-compression'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -25,6 +26,10 @@ export default defineConfig({
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
+    }),
+
+    Compression({
+      threshold: 1500,
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
