@@ -37,7 +37,7 @@ const handleShare = () => {
 
 <template>
   <div class="max-w-7xl mx-8 flex flex-col items-center select-none justify-center">
-    <div class="flex items-center mb-4">
+    <div class="flex items-center mb-4 <sm:w-full">
       ​<picture
         v-motion
         class="mr-6 cursor-pointer"
@@ -104,23 +104,56 @@ const handleShare = () => {
       </div>
     </div>
     <div class="mt-4 text-left w-full pl-6">
-      <h2 v-motion-slide-left class="font-semibold text-lg mb-4" :delay="10">
+      <h2 v-motion-slide-left class="font-semibold text-lg mb-4" :delay="14">
         {{ t('card.about.title') }}
       </h2>
       <p>
         <ul class="children:my-2">
-          <li v-motion-roll-left :delay="3">
+          <li
+            v-motion
+            :initial="{
+              x: -100,
+              opacity: 0,
+            }"
+            :enter="{
+              x: 0,
+              opacity: 1,
+            }"
+            :delay="3"
+          >
             <span class="mr-2">🎓</span> {{ t('card.about.gra') }}
           </li>
-          <li v-motion-roll-left :delay="4">
+          <li
+            v-motion
+            :initial="{
+              x: -100,
+              opacity: 0,
+            }"
+            :enter="{
+              x: 0,
+              opacity: 1,
+            }"
+            :delay="4"
+          >
             <span class="mr-2">💻</span> {{ t('card.about.web') }}
           </li>
-          <li v-motion-roll-left :delay="5">
+          <li
+            v-motion
+            :initial="{
+              x: -100,
+              opacity: 0,
+            }"
+            :enter="{
+              x: 0,
+              opacity: 1,
+            }"
+            :delay="5"
+          >
             <span class="mr-2">🎈</span> {{ t('card.about.alo') }}
           </li>
         </ul>
       </p>
-      <h2 v-motion-slide-left class="font-semibold text-lg mb-4 mt-6" :delay="12" :hovered="{}">
+      <h2 v-motion-slide-left class="font-semibold text-lg mb-4 mt-6" :delay="14" :hovered="{}">
         {{ t('card.love.title') }}
       </h2>
       <p v-motion-pop :delay="8">
@@ -132,7 +165,7 @@ const handleShare = () => {
       <p v-motion-pop :delay="8">
         {{ t('card.status.content') }}
       </p>
-      <h2 v-motion-slide-left class="font-semibold text-lg mb-3 mt-6" :delay="16">
+      <h2 v-motion-slide-left class="font-semibold text-lg mb-3 mt-6" :delay="14">
         {{ t('card.contact.title') }}
       </h2>
       <nav v-motion-pop class="text-base" :delay="14">
