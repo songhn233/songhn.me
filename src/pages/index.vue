@@ -9,8 +9,8 @@ const handleShare = () => {
   if (typeof window !== 'undefined') {
     try {
       (window.navigator.share as any)({
-        title: 'Web Share API Polyfill',
-        text: 'A polyfill for the Share API. Use it to share in both desktops and mobile devices.',
+        title: 'Songhn Personal Card',
+        text: 'Songhn personal homepage card, share my information and contact methods',
         url: window.location.href,
       }, {
         copy: true,
@@ -176,7 +176,7 @@ const handleShare = () => {
           <a
             class="icon-btn mx-2"
             rel="noreferrer"
-            href="https://github.com/antfu/vitesse"
+            href="https://github.com/songhn233"
             target="_blank"
             title="GitHub"
           >
