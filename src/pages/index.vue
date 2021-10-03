@@ -195,7 +195,7 @@ const handleShare = () => {
             rel="noreferrer"
             href="https://www.zhihu.com/people/song-nan-80-71"
             target="_blank"
-            title="Twitter"
+            title="Zhihu"
           >
             <ant-design-zhihu-outlined />
           </a>
