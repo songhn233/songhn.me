@@ -15,7 +15,7 @@ import 'virtual:windi-utilities.css'
 // windicss devtools support (dev only)
 import 'virtual:windi-devtools'
 
-if (typeof document !== 'undefined')
+if (typeof document !== 'undefined' && typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: no-preference)').matches)
   (window as any).AOS.init()
 
 const routes = setupLayouts(generatedRoutes)
