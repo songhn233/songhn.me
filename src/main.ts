@@ -2,9 +2,6 @@
 import { ViteSSG } from 'vite-ssg'
 import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
-import { MotionPlugin } from '@vueuse/motion'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 import App from './App.vue'
 
@@ -18,7 +15,8 @@ import 'virtual:windi-utilities.css'
 // windicss devtools support (dev only)
 import 'virtual:windi-devtools'
 
-AOS.init()
+if (typeof document !== 'undefined')
+  (window as any).AOS.init()
 
 const routes = setupLayouts(generatedRoutes)
 
@@ -29,7 +27,5 @@ export const createApp = ViteSSG(
   (ctx) => {
     // install all modules under `modules/`
     Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(ctx))
-
-    ctx.app.use(MotionPlugin)
   },
 )

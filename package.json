@@ -11,7 +11,6 @@
   "dependencies": {
     "@vueuse/core": "^6.5.3",
     "@vueuse/head": "^0.6.0",
-    "aos": "^2.3.4",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
     "share-api-polyfill": "^1.0.21",
