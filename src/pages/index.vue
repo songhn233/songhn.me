@@ -108,52 +108,31 @@ const handleShare = () => {
         {{ t('card.about.title') }}
       </h2>
       <p>
-        <ul class="children:my-2">
-          <li
-            v-motion
-            :initial="{
-              x: -100,
-              opacity: 0,
-            }"
-            :enter="{
-              x: 0,
-              opacity: 1,
-            }"
-            :delay="3"
-          >
+        <ul
+          v-motion
+          class="children:my-2"
+          :initial="{
+            x: -100,
+            opacity: 0,
+          }"
+          :enter="{
+            x: 0,
+            opacity: 1,
+          }"
+          :delay="8"
+        >
+          <li>
             <span class="mr-2">🎓</span> {{ t('card.about.gra') }}
           </li>
-          <li
-            v-motion
-            :initial="{
-              x: -100,
-              opacity: 0,
-            }"
-            :enter="{
-              x: 0,
-              opacity: 1,
-            }"
-            :delay="4"
-          >
+          <li>
             <span class="mr-2">💻</span> {{ t('card.about.web') }}
           </li>
-          <li
-            v-motion
-            :initial="{
-              x: -100,
-              opacity: 0,
-            }"
-            :enter="{
-              x: 0,
-              opacity: 1,
-            }"
-            :delay="5"
-          >
+          <li>
             <span class="mr-2">🎈</span> {{ t('card.about.alo') }}
           </li>
         </ul>
       </p>
-      <h2
+      <div
         v-motion
         :initial="{
           x: -100,
@@ -163,16 +142,18 @@ const handleShare = () => {
           x: 0,
           opacity: 1,
         }"
-        class="font-semibold text-lg mb-4 mt-6"
-        :delay="14"
-        :hovered="{}"
+        :delay="8"
       >
-        {{ t('card.love.title') }}
-      </h2>
-      <p v-motion-pop :delay="8">
-        {{ t('card.love.content') }}
-      </p>
-      <h2
+        <h2
+          class="font-semibold text-lg mb-4 mt-6"
+        >
+          {{ t('card.love.title') }}
+        </h2>
+        <p>
+          {{ t('card.love.content') }}
+        </p>
+      </div>
+      <div
         v-motion
         :initial="{
           x: -100,
@@ -182,14 +163,15 @@ const handleShare = () => {
           x: 0,
           opacity: 1,
         }"
-        class="font-semibold text-lg mb-4 mt-6"
-        :delay="14"
+        :delay="8"
       >
-        {{ t('card.status.title') }}
-      </h2>
-      <p v-motion-pop :delay="8">
-        {{ t('card.status.content') }}
-      </p>
+        <h2 class="font-semibold text-lg mb-4 mt-6">
+          {{ t('card.status.title') }}
+        </h2>
+        <p>
+          {{ t('card.status.content') }}
+        </p>
+      </div>
       <h2
         v-motion
         :initial="{
@@ -201,7 +183,7 @@ const handleShare = () => {
           opacity: 1,
         }"
         class="font-semibold text-lg mb-3 mt-6"
-        :delay="14"
+        :delay="8"
       >
         {{ t('card.contact.title') }}
       </h2>
