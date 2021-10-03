@@ -25,6 +25,7 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
       - name: Build
         run: |
+          pnpm i
           pnpm build
       - name: Deploy to OSS
         env:
