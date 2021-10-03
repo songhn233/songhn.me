@@ -111,9 +111,9 @@ const handleShare = () => {
         </p>
       </div>
     </div>
-    <div class="mt-4 text-left w-full pl-6">
-      <div data-aos="fade-right" data-aos-duration="1000">
-        <h2 class="font-semibold text-lg mb-4">
+    <div class="mt-4 text-left w-full pl-12 <sm:(pl-6)">
+      <div data-aos="fade-right" data-aos-duration="1000" class="mb-8">
+        <h2 class="font-semibold text-lg mb-4 <sm:(text-base)">
           {{ t('card.about.title') }}
         </h2>
         <p>
@@ -130,9 +130,9 @@ const handleShare = () => {
           </ul>
         </p>
       </div>
-      <div data-aos="fade-left" data-aos-duration="1000">
+      <div data-aos="fade-left" data-aos-duration="1000" class="mb-8">
         <h2
-          class="font-semibold text-lg mb-4 mt-6"
+          class="font-semibold text-lg mb-4 mt-6 <sm:(text-base)"
         >
           {{ t('card.love.title') }}
         </h2>
@@ -140,17 +140,17 @@ const handleShare = () => {
           {{ t('card.love.content') }}
         </p>
       </div>
-      <div data-aos="fade-right" data-aos-duration="1000">
-        <h2 class="font-semibold text-lg mb-4 mt-6">
+      <div data-aos="fade-right" data-aos-duration="1000" class="mb-8">
+        <h2 class="font-semibold text-lg mb-4 mt-6 <sm:(text-base)">
           {{ t('card.status.title') }}
         </h2>
         <p>
           {{ t('card.status.content') }}
         </p>
       </div>
-      <div data-aos="fade-left" data-aos-duration="1000">
+      <div data-aos="fade-left" data-aos-duration="1000" class="mb-8">
         <h2
-          class="font-semibold text-lg mb-3 mt-6"
+          class="font-semibold text-lg mb-3 mt-6 <sm:(text-base)"
         >
           {{ t('card.contact.title') }}
         </h2>
