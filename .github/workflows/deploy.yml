@@ -11,11 +11,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
-      - name: Build
+      - name: Prepare
         run: |
           npm install -g pnpm
-          pnpm i
+      - name: Cache pnpm
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-pnpm-modules
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
+      - name: Build
+        run: |
           pnpm build
       - name: Deploy to OSS
         env:

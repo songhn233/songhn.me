@@ -37,19 +37,11 @@ const handleShare = () => {
 
 <template>
   <div class="max-w-7xl mx-8 flex flex-col items-center select-none justify-center">
-    <div class="flex items-center mb-4 <sm:w-full">
+    <div class="flex items-center mb-4 <sm:w-full pl-6">
       ​<picture
-        v-motion
         class="mr-6 cursor-pointer"
-        :hovered="{ scale: 1.1 }"
-        :initial="{
-          scale: 0,
-          opacity: 0,
-        }"
-        :enter="{
-          scale: 1,
-          opacity: 1,
-        }"
+        data-aos="zoom-in"
+        data-aos-duration="500"
       >
         <source
           srcset="https://img.songhn.com/avatar-shn.avif"
@@ -79,71 +71,66 @@ const handleShare = () => {
         />
       </picture>
       <div>
-        <h1 v-motion-roll-top class="text-2xl font-semibold <sm:(text-left)">
+        <h1 class="text-2xl font-semibold <sm:(text-left)" data-aos="fade-left" data-aos-delay="50">
           <span class="<sm:(text-xl)">👏 {{ t('card.plain.hello') }}</span>
           <span class="<sm:(block text-lg)">{{ t('card.plain.me') }}</span>
         </h1>
         <p class="text-left mt-3 pl-1">
           <button
-            v-motion-roll-right
             class="icon-btn !outline-none cursor-pointer"
             :title="t('button.toggle_dark')"
+            data-aos="flip-left"
+            data-aos-delay="50"
+            data-aos-duration="800"
             @click="toggleDark()"
           >
             <carbon-moon v-if="isDark" />
             <carbon-sun v-else />
           </button>
 
-          <a v-motion-roll-right class="icon-btn mx-4" :title="t('button.toggle_langs')" :delay="4" @click="toggleLocales">
+          <a
+            class="icon-btn mx-4"
+            :title="t('button.toggle_langs')"
+            data-aos="flip-left"
+            data-aos-delay="200"
+            data-aos-duration="800"
+            @click="toggleLocales"
+          >
             <carbon-language />
           </a>
-          <button v-motion-roll-right class="icon-btn !outline-none cursor-pointer" :title="t('button.share')" delay="8" @click="handleShare">
+          <button
+            class="icon-btn !outline-none cursor-pointer"
+            :title="t('button.share')"
+            data-aos="flip-left"
+            data-aos-delay="350"
+            data-aos-duration="800"
+            @click="handleShare"
+          >
             <carbon-share />
           </button>
         </p>
       </div>
     </div>
     <div class="mt-4 text-left w-full pl-6">
-      <h2 v-motion-slide-left class="font-semibold text-lg mb-4" :delay="14">
-        {{ t('card.about.title') }}
-      </h2>
-      <p>
-        <ul
-          v-motion
-          class="children:my-2"
-          :initial="{
-            x: -100,
-            opacity: 0,
-          }"
-          :enter="{
-            x: 0,
-            opacity: 1,
-          }"
-          :delay="8"
-        >
-          <li>
-            <span class="mr-2">🎓</span> {{ t('card.about.gra') }}
-          </li>
-          <li>
-            <span class="mr-2">💻</span> {{ t('card.about.web') }}
-          </li>
-          <li>
-            <span class="mr-2">🎈</span> {{ t('card.about.alo') }}
-          </li>
-        </ul>
-      </p>
-      <div
-        v-motion
-        :initial="{
-          x: -100,
-          opacity: 0,
-        }"
-        :enter="{
-          x: 0,
-          opacity: 1,
-        }"
-        :delay="8"
-      >
+      <div data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="font-semibold text-lg mb-4">
+          {{ t('card.about.title') }}
+        </h2>
+        <p>
+          <ul class="children:my-2">
+            <li>
+              <span class="mr-2">🎓</span> {{ t('card.about.gra') }}
+            </li>
+            <li>
+              <span class="mr-2">💻</span> {{ t('card.about.web') }}
+            </li>
+            <li>
+              <span class="mr-2">🎈</span> {{ t('card.about.alo') }}
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div data-aos="fade-left" data-aos-duration="1000">
         <h2
           class="font-semibold text-lg mb-4 mt-6"
         >
@@ -153,18 +140,7 @@ const handleShare = () => {
           {{ t('card.love.content') }}
         </p>
       </div>
-      <div
-        v-motion
-        :initial="{
-          x: -100,
-          opacity: 0,
-        }"
-        :enter="{
-          x: 0,
-          opacity: 1,
-        }"
-        :delay="8"
-      >
+      <div data-aos="fade-right" data-aos-duration="1000">
         <h2 class="font-semibold text-lg mb-4 mt-6">
           {{ t('card.status.title') }}
         </h2>
@@ -172,67 +148,51 @@ const handleShare = () => {
           {{ t('card.status.content') }}
         </p>
       </div>
-      <h2
-        v-motion
-        :initial="{
-          x: -100,
-          opacity: 0,
-        }"
-        :enter="{
-          x: 0,
-          opacity: 1,
-        }"
-        class="font-semibold text-lg mb-3 mt-6"
-        :delay="8"
-      >
-        {{ t('card.contact.title') }}
-      </h2>
-      <nav v-motion-pop class="text-base" :delay="14">
-        <a
-          v-motion-pop
-          class="icon-btn mx-2"
-          rel="noreferrer"
-          href="https://blog.songhn.com"
-          target="_blank"
-          title="Blog"
-          :delay="20"
+      <div data-aos="fade-left" data-aos-duration="1000">
+        <h2
+          class="font-semibold text-lg mb-3 mt-6"
         >
-          <carbon-edit />
-        </a>
-        <a
-          v-motion-pop
-          class="icon-btn mx-2"
-          rel="noreferrer"
-          href="mailto:songhn233@gmail.com"
-          target="_blank"
-          title="Email"
-          :delay="80"
-        >
-          <carbon-email-new />
-        </a>
-        <a
-          v-motion-pop
-          class="icon-btn mx-2"
-          rel="noreferrer"
-          href="https://github.com/antfu/vitesse"
-          target="_blank"
-          title="GitHub"
-          :delay="140"
-        >
-          <iconoir-github />
-        </a>
-        <a
-          v-motion-pop
-          class="icon-btn mx-2"
-          rel="noreferrer"
-          href="https://www.zhihu.com/people/song-nan-80-71"
-          target="_blank"
-          title="Twitter"
-          :delay="200"
-        >
-          <ant-design-zhihu-outlined />
-        </a>
-      </nav>
+          {{ t('card.contact.title') }}
+        </h2>
+        <nav class="text-base">
+          <a
+            class="icon-btn mx-2"
+            rel="noreferrer"
+            href="https://blog.songhn.com"
+            target="_blank"
+            title="Blog"
+          >
+            <carbon-edit />
+          </a>
+          <a
+            class="icon-btn mx-2"
+            rel="noreferrer"
+            href="mailto:songhn233@gmail.com"
+            target="_blank"
+            title="Email"
+          >
+            <carbon-email-new />
+          </a>
+          <a
+            class="icon-btn mx-2"
+            rel="noreferrer"
+            href="https://github.com/antfu/vitesse"
+            target="_blank"
+            title="GitHub"
+          >
+            <iconoir-github />
+          </a>
+          <a
+            class="icon-btn mx-2"
+            rel="noreferrer"
+            href="https://www.zhihu.com/people/song-nan-80-71"
+            target="_blank"
+            title="Twitter"
+          >
+            <ant-design-zhihu-outlined />
+          </a>
+        </nav>
+      </div>
     </div>
   </div>
 </template>
