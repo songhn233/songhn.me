@@ -50,7 +50,9 @@ const handleShare = () => {
           height="80"
           alt="avatar"
           draggable="false"
-          class="rounded-full shadow-md shadow-dark-900 dark:shadow-light-900"
+          decoding="async"
+          importance="high"
+          class="rounded-full shadow-md shadow-dark-900 dark:shadow-light-900 select-none"
         >
         <source
           srcset="https://img.songhn.com/img/avatar-shn.webp"
@@ -59,7 +61,9 @@ const handleShare = () => {
           height="80"
           alt="avatar"
           draggable="false"
-          class="rounded-full shadow-md shadow-dark-900 dark:shadow-light-900"
+          decoding="async"
+          importance="high"
+          class="rounded-full shadow-md shadow-dark-900 dark:shadow-light-900 select-none"
         >
         <img
           src="https://img.songhn.com/img/avatar-shn.jpeg"
@@ -67,7 +71,9 @@ const handleShare = () => {
           height="80"
           alt="avatar"
           draggable="false"
-          class="rounded-full shadow-md shadow-dark-900 dark:shadow-light-900"
+          decoding="async"
+          importance="high"
+          class="rounded-full shadow-md shadow-dark-900 dark:shadow-light-900 select-none"
         />
       </picture>
       <div>
