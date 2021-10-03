@@ -11,7 +11,7 @@ The page link: [songhn.com](https://songhn.com)
 - 🌍 i18n (zh-CN & en support)
 - ♿️ Well-accessible motion
 - 📣 Web share api (include polyfill)
-
+- 🌒 Dark mode support
 ## Todo (Maybe)
 - [ ] Sync introduction markdown from gist or other sources
 - [ ] Information display in the form of question and answer
