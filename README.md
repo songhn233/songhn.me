@@ -25,3 +25,5 @@ Special thanks to the following projects.
 - [Vitesse](https://github.com/antfu/vitesse) - Vite starter template
 - [aos](https://github.com/michalsnik/aos) - Animate on scroll
 - [share-api-polyfill](https://github.com/on2-dev/share-api-polyfill) - Share api polyfill
+- [error404.fun](https://error404.fun/) - free illustrations for 404 page
+- [loading.io](https://loading.io/) - Pure CSS loaders
