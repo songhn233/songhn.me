@@ -152,9 +152,20 @@ const handleShare = () => {
         <h2 class="font-semibold text-lg mb-4 mt-6 <sm:(text-base)">
           {{ t('card.status.title') }}
         </h2>
-        <p>
-          {{ t('card.status.content') }}
+        <ul>
+          <li>
+            {{ t('card.status.content.left') + ' @Bytedance' }}
+          </li>
+          <li class="mt-1">
+            {{ t('card.status.content.right') }}
+          </li>
+        </ul>
+        <!-- <p>
+          {{ t('card.status.content.left') + ' @Bytedance' }}
         </p>
+        <p>
+          {{ t('card.status.content.right') }}
+        </p> -->
       </div>
       <div data-aos="fade-left" data-aos-duration="1000" class="mb-8">
         <h2

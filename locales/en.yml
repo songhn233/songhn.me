@@ -13,6 +13,8 @@ card:
     hello: 'Hello, '
     me: I'm Songhn
   status:
-    content: 👨‍💻 Intern, 🎨 Learning UI & UX
+    content: 
+      left: 👨‍💻 Intern
+      right: 🎨 Learning UI & UX
     title: CURRENT STATE ?
 not-found: The page is not found, will be returned to the home page
