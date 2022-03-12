@@ -38,7 +38,7 @@ const handleShare = () => {
 <template>
   <div class="max-w-7xl mx-8 flex flex-col items-center select-none justify-center">
     <div class="flex items-center mb-4 <sm:w-full pl-6">
-      ​<picture
+      <picture
         class="mr-6 cursor-pointer"
         data-aos="zoom-in"
         data-aos-duration="500"

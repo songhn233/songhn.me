@@ -6,7 +6,6 @@ specifiers:
   '@iconify-json/carbon': ^1.0.3
   '@iconify-json/iconoir': ^1.0.1
   '@intlify/vite-plugin-vue-i18n': ^3.2.1
-  '@types/aos': ^3.0.4
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
   '@vitejs/plugin-vue': ^1.9.2
@@ -20,6 +19,7 @@ specifiers:
   https-localhost: ^4.7.0
   markdown-it-link-attributes: ^3.0.0
   markdown-it-prism: ^2.2.1
+  motion: ^10.6.2
   nprogress: ^0.2.0
   pnpm: ^6.16.0
   prism-theme-vars: ^0.2.2
@@ -44,6 +44,7 @@ specifiers:
 dependencies:
   '@vueuse/core': 6.5.3_vue@3.2.19
   '@vueuse/head': 0.6.0_vue@3.2.19
+  motion: 10.6.2
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
   share-api-polyfill: 1.0.21
@@ -58,7 +59,6 @@ devDependencies:
   '@iconify-json/carbon': 1.0.3
   '@iconify-json/iconoir': 1.0.1
   '@intlify/vite-plugin-vue-i18n': 3.2.1_vite@2.6.2+vue-i18n@9.1.7
-  '@types/aos': 3.0.4
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 1.9.2_vite@2.6.2
@@ -506,8 +506,8 @@ packages:
       '@iconify/types': 1.0.9
     dev: true
 
-  /@intlify/bundle-utils/2.1.0_vue-i18n@9.1.7:
-    resolution: {integrity: sha512-ogvmAjbSq0su4ijQbwqRfb0yimizZSK+HHV0SF3XCHSCtL+PDdRIDkkeNpNdPxNmdahORHXknC06Umehz4nTnQ==}
+  /@intlify/bundle-utils/2.2.0_vue-i18n@9.1.7:
+    resolution: {integrity: sha512-qVuN7+c84UB6rlLHSued2J9R86LG1rHg6ZibCghGMyPXnW0nOuIfkUFf1F7tXIqfMXjIPeJzlbpmzjWTI2z9Kw==}
     engines: {node: '>= 12'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -518,8 +518,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.2.0-beta.23
-      '@intlify/shared': 9.2.0-beta.23
+      '@intlify/message-compiler': 9.2.0-beta.32
+      '@intlify/shared': 9.2.0-beta.32
       jsonc-eslint-parser: 1.3.1
       source-map: 0.6.1
       vue-i18n: 9.1.7_vue@3.2.19
@@ -554,11 +554,11 @@ packages:
       source-map: 0.6.1
     dev: false
 
-  /@intlify/message-compiler/9.2.0-beta.23:
-    resolution: {integrity: sha512-qmGN8k5yGGdZ5St8yg8U4Tg2K9Sc6h3BhWCdJKAqQVs5jnfZG+nMtsLVgnJUWkDvhjzyg7/rEOhHm2uJcu4vjw==}
+  /@intlify/message-compiler/9.2.0-beta.32:
+    resolution: {integrity: sha512-7OOHIhOmOM4nqe3KfEuE65xLwawwBGg/pCFByzayf0jARoHkeaA7v/eKsUJVJMEakeF2pNstx06AvfecijgPzg==}
     engines: {node: '>= 12'}
     dependencies:
-      '@intlify/shared': 9.2.0-beta.23
+      '@intlify/shared': 9.2.0-beta.32
       source-map: 0.6.1
     dev: true
 
@@ -581,8 +581,8 @@ packages:
     engines: {node: '>= 10'}
     dev: false
 
-  /@intlify/shared/9.2.0-beta.23:
-    resolution: {integrity: sha512-3aELL2KTp1MWKGm2gIUKSagthgKzcK5hpQEFzOwkJ1SAthpTXR7BHeWGEaD+Lj+Pbiz3U8cspvp8s2lFWVbYxg==}
+  /@intlify/shared/9.2.0-beta.32:
+    resolution: {integrity: sha512-lVaHnKFNg16eWlfDLzDFLapurrf0WK7xLWEkz8DMYNIXJshRQOZCkH7sQaqtONPoOT0LqjyPo1+sV0Wq85/HRQ==}
     engines: {node: '>= 12'}
     dev: true
 
@@ -599,8 +599,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/bundle-utils': 2.1.0_vue-i18n@9.1.7
-      '@intlify/shared': 9.2.0-beta.23
+      '@intlify/bundle-utils': 2.2.0_vue-i18n@9.1.7
+      '@intlify/shared': 9.2.0-beta.32
       '@rollup/pluginutils': 4.1.1
       debug: 4.3.2
       fast-glob: 3.2.7
@@ -618,6 +618,84 @@ packages:
       '@intlify/message-resolver': 9.1.7
       '@intlify/runtime': 9.1.7
       '@intlify/shared': 9.1.7
+    dev: false
+
+  /@motionone/animation/10.6.2:
+    resolution: {integrity: sha512-LOq9SYwNSEg1aSM16a1HlQPIxEC+XTIq3+DwjXKH+ORHCmhULSmdWhjOr+7Yn1Up4fejbJgdW04nGnPuMsnjYA==}
+    dependencies:
+      '@motionone/easing': 10.6.2
+      '@motionone/types': 10.6.2
+      '@motionone/utils': 10.6.2
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/dom/10.6.2:
+    resolution: {integrity: sha512-AjYDuHIY9LfN7BARJ9bHZOjACh0Vkqc8Mhohud4VBDg6vAx/FnS1dh8WhMW9kS15Kd6DU1wKl5Qt65md2hAU8g==}
+    dependencies:
+      '@motionone/animation': 10.6.2
+      '@motionone/easing': 10.6.2
+      '@motionone/generators': 10.6.2
+      '@motionone/types': 10.6.2
+      '@motionone/utils': 10.6.2
+      hey-listen: 1.0.8
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/easing/10.6.2:
+    resolution: {integrity: sha512-zzagQP2pu7lNcKOX1HQA+w4mb47ETsyxqXOQf7572QnlGc6pQTCuUZmRIhwKjqn5VMA1kuS6XIY66KGF1284Ow==}
+    dependencies:
+      '@motionone/utils': 10.6.2
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/generators/10.6.2:
+    resolution: {integrity: sha512-PofvpII7izwoxpJbwEpKBttRw943AogMBsGEXfxbD7WM7qCDbL0hBpiuxVgGqi9PtRG/AhNqD1M0HcTz8TePlQ==}
+    dependencies:
+      '@motionone/types': 10.6.2
+      '@motionone/utils': 10.6.2
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/react/10.6.2:
+    resolution: {integrity: sha512-LsCoyvsZhK8+gpxmOs1RESApB+M0t3KSraRE0HiHAO0AMBI3NNeSXWBF3Hz2OyRSMa75cL7evnWsofrN3ilDBA==}
+    peerDependencies:
+      react: ^17.0.2
+      react-dom: ^17.0.2
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@motionone/dom': 10.6.2
+      hey-listen: 1.0.8
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/svelte/10.6.2:
+    resolution: {integrity: sha512-WFnjXHf43P4w8dEFrd8m0wxs3kRr/dZCVLXDbC+eejaRxJCEyeaJDNzGkWyGxDMXST897rQNoDy5p5WDsszW2A==}
+    dependencies:
+      '@motionone/dom': 10.6.2
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/types/10.6.2:
+    resolution: {integrity: sha512-7YH5OGOhFN2fhxAc2L4i5LFQ/GqliiDt8DvN6htGXEMAleq1o0CVHlHdXyLG9l9eBM1NHlU75BjK3eLouSSFzA==}
+    dev: false
+
+  /@motionone/utils/10.6.2:
+    resolution: {integrity: sha512-zy0pLX7aaDfKoO8nKZbjFGjjZpXNmWo3ae9S/WzoQ2U7a7/ePLa9gSzFDefm2553FtLTaaYecnSf1FH2BTVaww==}
+    dependencies:
+      '@motionone/types': 10.6.2
+      hey-listen: 1.0.8
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/vue/10.6.2:
+    resolution: {integrity: sha512-pwhV9n4WV/w86Rqzou88pfWIv6Andgib3HJP+/LcWdjNcc2rFyJ9g9wpT9MDS7QO3ouXl6xXljTD5FBXN60/3g==}
+    dependencies:
+      '@motionone/dom': 10.6.2
+      tslib: 2.3.1
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -656,10 +734,6 @@ packages:
   /@tootallnate/once/1.1.2:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
     engines: {node: '>= 6'}
-    dev: true
-
-  /@types/aos/3.0.4:
-    resolution: {integrity: sha512-mna6Jd6bdK1NpwarLopGvXOgUoCfj0470IwLxuVOFDElTGI0JTd7xSGQ0AjbAEnHErC/b3fA9t2uB3IXVKmckA==}
     dev: true
 
   /@types/json-schema/7.0.9:
@@ -2723,6 +2797,10 @@ packages:
     hasBin: true
     dev: true
 
+  /hey-listen/1.0.8:
+    resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
+    dev: false
+
   /highlight.js/10.7.3:
     resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
     dev: true
@@ -3473,6 +3551,19 @@ packages:
     dependencies:
       import-meta-resolve: 1.1.1
     dev: true
+
+  /motion/10.6.2:
+    resolution: {integrity: sha512-xvmWg7GlcNZwcddenQ25uqmlIsSWwFKS1C7EDpwQB1hjeJf2zFsdzM0CPSzZ+eC0qh3RXgRv7R6r4AthZiv4Qg==}
+    dependencies:
+      '@motionone/animation': 10.6.2
+      '@motionone/dom': 10.6.2
+      '@motionone/react': 10.6.2
+      '@motionone/svelte': 10.6.2
+      '@motionone/vue': 10.6.2
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
 
   /ms/2.0.0:
     resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
@@ -4652,6 +4743,10 @@ packages:
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
+
+  /tslib/2.3.1:
+    resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
+    dev: false
 
   /tsup/5.2.1_typescript@4.4.3:
     resolution: {integrity: sha512-eQmRfKoHIiTFg38Dh2MARCx3J0+P+wbwB5iSHcXTwsnVR9csGLpln5qqBjdgyAGV1VTbOmyU37veCi2eA+wuqA==}
