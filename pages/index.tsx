@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import MyAvatar from '../public/images/avatar.jpg';
@@ -37,11 +37,9 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
               👋 Hello, I&lsquo;m{' '}
               <mark
                 className="bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-                style={
-                  {
-                    '-webkit-text-fill-color': 'transparent',
-                  } as any
-                }
+                style={{
+                  WebkitTextFillColor: 'transparent',
+                }}
               >
                 Songhn
               </mark>
@@ -203,14 +201,14 @@ export function BlogIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-// export const getStaticProps: GetStaticProps = async ({ locale }) => {
-//   const year = new Date().getFullYear();
-//   return {
-//     props: {
-//       year,
-//       ...(await serverSideTranslations(locale!, ['common'])),
-//     },
-//   };
-// };
+export const getStaticProps: GetStaticProps = async () => {
+  const year = new Date().getFullYear();
+  return {
+    props: {
+      year,
+      // ...(await serverSideTranslations(locale!, ['common'])),
+    },
+  };
+};
 
 export default Home;
