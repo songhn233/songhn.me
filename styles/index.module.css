@@ -1,0 +1,4 @@
+.home-link {
+  @apply border-gray-700 no-underline transition-all duration-100 ease-in-out border-b;
+  @apply hover:border-b-2 hover:text-primary;
+}
