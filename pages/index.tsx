@@ -99,7 +99,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
             .
           </p>
           <p className="flex items-center">
-            <span className="pr-1">Other social links:</span>
+            <span className="pr-1">Social links:</span>
             <SocialLink
               Icon={GithubIcon}
               href={'https://github.com/songhn233'}
