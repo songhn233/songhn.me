@@ -64,7 +64,12 @@ export default function Navbar() {
                   tabIndex={0}
                   onClick={(e) => {
                     e.preventDefault();
-                    toast('🚧 Working In Progress');
+                    toast('🚧 Working In Progress', {
+                      style: {
+                        backgroundColor: 'hsl(var(--b1))',
+                        color: 'hsl(var(--bc))',
+                      },
+                    });
                   }}
                 >
                   Articles
