@@ -1,8 +1,13 @@
 import { SVGProps } from 'react';
+import toast from 'react-hot-toast';
 
 export default function LanguageSwitcher() {
   return (
-    <button className="btn btn-ghost btn-circle">
+    <button
+      className="btn btn-ghost btn-circle"
+      onClick={() => toast('🚧 Working In Progress')}
+      aria-label="Language Switcher"
+    >
       <LanguageIcon className="w-5 h-5" />
     </button>
   );

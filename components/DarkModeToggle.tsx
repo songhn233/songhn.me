@@ -4,7 +4,11 @@ import { useDark } from '../hooks/useDark';
 export default function DarkModeToggle() {
   const [toggleDark] = useDark();
   return (
-    <button className="btn btn-ghost btn-circle" onClick={() => toggleDark()}>
+    <button
+      className="btn btn-ghost btn-circle"
+      onClick={() => toggleDark()}
+      aria-label="Toggle Dark Mode"
+    >
       <DarkModeIcon className="w-5 h-5" />
     </button>
   );

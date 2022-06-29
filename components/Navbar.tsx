@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import DarkModeToggle from './DarkModeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -51,8 +52,15 @@ export default function Navbar() {
                 <a tabIndex={0}>Homepage</a>
               </li>
               <li>
-                <a href="https://blog.songhn.com" rel="noopener" tabIndex={0}>
-                  Blog
+                <a
+                  rel="noopener"
+                  tabIndex={0}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toast('🚧 Working In Progress');
+                  }}
+                >
+                  Articles
                 </a>
               </li>
             </ul>
@@ -64,6 +72,7 @@ export default function Navbar() {
           <DarkModeToggle />
         </div>
       </nav>
+      <Toaster toastOptions={{ duration: 3000 }} />
     </>
   );
 }

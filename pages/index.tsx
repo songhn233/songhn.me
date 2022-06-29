@@ -22,7 +22,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
       <Navbar />
       <main className="container mx-auto my-8 prose px-7 lg:px-8">
         <div className="flex items-center justify-center">
-          <div className="w-16 h-16 overflow-hidden rounded-full shadow-md select-none shadow-dark-900 dark:shadow-light-900">
+          <div className="w-16 h-16 overflow-hidden rounded-full shadow-md shadow-dark-900 dark:shadow-light-900">
             <Image
               src={MyAvatar}
               alt="Avatar"
@@ -30,6 +30,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
               priority
               width={80}
               height={80}
+              draggable={false}
             />
           </div>
           <div className="ml-4 md:ml-6 lg:ml-8">
