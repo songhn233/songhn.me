@@ -1,5 +1,11 @@
 # My Homepage
 
+> **Note**
+> 
+> The site is recently being refactored with Next.js and article blog support is being considered.
+> 
+> Previous releases built with `vite-ssg` + `Vue` can be seen in the [main](https://github.com/songhn233/songhn.me/tree/main) branch
+
 ## Description
 
 👏 Hello, I'm Songhn. This is my profile page.
