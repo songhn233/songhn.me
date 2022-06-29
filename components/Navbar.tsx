@@ -49,18 +49,17 @@ export default function Navbar() {
             </label>
             <ul className="p-2 mt-3 shadow dropdown-content menu rounded-box menu-compact w-52 bg-base-100">
               <li>
-                <a
+                <button
                   tabIndex={0}
                   onClick={(e) => {
                     e.preventDefault();
                   }}
                 >
                   Homepage
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  rel="noopener"
+                <button
                   tabIndex={0}
                   onClick={(e) => {
                     e.preventDefault();
@@ -73,11 +72,11 @@ export default function Navbar() {
                   }}
                 >
                   Articles
-                </a>
+                </button>
               </li>
             </ul>
           </div>
-          <a className="text-xl normal-case btn btn-ghost">Songhn Site</a>
+          <div className="text-xl normal-case btn btn-ghost">Songhn Site</div>
         </div>
         <div className="navbar-end">
           <LanguageSwitcher />
