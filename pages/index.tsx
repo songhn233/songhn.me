@@ -6,9 +6,11 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { SVGProps } from 'react';
 import { SocialLink } from '../components/SocialLink';
+import styles from '../styles/index.module.css';
+import ScaleBox from '../animations/ScaleBox';
+import FadeInBox from '../animations/FadeInBox';
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // import { useTranslation } from 'next-i18next';
-import styles from '../styles/index.module.css';
 
 const Home: NextPage<{ year: string }> = ({ year }) => {
   // const { t } = useTranslation('common');
@@ -22,20 +24,23 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
       <Navbar />
       <main className="container mx-auto my-8 prose px-7 lg:px-8">
         <div className="flex items-center justify-center">
-          <div className="w-12 h-12 overflow-hidden rounded-full shadow-md sm:w-16 sm:h-16 shadow-dark-900 dark:shadow-light-900">
-            <Image
-              src={MyAvatar}
-              alt="Avatar"
-              placeholder="blur"
-              priority
-              width={128}
-              height={128}
-              draggable={false}
-            />
-          </div>
+          <ScaleBox>
+            <div className="w-12 h-12 overflow-hidden rounded-full shadow-md sm:w-16 sm:h-16 shadow-dark-900 dark:shadow-light-900">
+              <Image
+                src={MyAvatar}
+                alt="Avatar"
+                placeholder="blur"
+                priority
+                width={128}
+                height={128}
+                draggable={false}
+              />
+            </div>
+          </ScaleBox>
+
           <div className="ml-4 md:ml-6 lg:ml-8">
             <h2 className="!my-0 !mb-1 !text-xl md:!text-2xl">
-              👋 Hello, I&lsquo;m{' '}
+              👋 Hello, I&#39;m{' '}
               <mark
                 className="bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
                 style={{
@@ -54,76 +59,79 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
             </p>
           </div>
         </div>
-        <article>
-          <p className="mt-6 lg:mt-8">
-            Hey, I am a junior at 🎓{' '}
-            <abbr
-              title="Hangzhou Dianzi University"
-              className="decoration-wavy decoration-info"
-            >
-              HDU
-            </abbr>
-            , majoring in 🖥 Computer Science. Ex-intern at{' '}
-            <strong>ByteDance</strong>.
-          </p>
-          <p>
-            I work mostly with React & Typescript, and in spare time, trying to
-            learn Rust or Golang. My focus as an amateur is on{' '}
-            <strong>📈 Data visualization</strong> and{' '}
-            <strong>⚙️ Static site generation</strong>. You might be interested
-            in{' '}
-            <a
-              className={styles['home-link']}
-              href="https://github.com/theme-kaze/hexo-theme-kaze"
-              title="Theme Kaze"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Kaze
-            </a>
-            , a modern blog theme for Hexo.
-          </p>
-          <p>
-            Outside of programming, hobbies are barren. Anime and Vtubers are
-            the main form of entertainment (so sad 😢). Trying to change things,
-            maybe...
-          </p>
-          <hr className="mx-auto !my-7 w-20" />
-          <p>
-            Want to contact me? Mail me at <MailIcon className="inline-block" />{' '}
-            <a
-              href="mailto:songhn233@gmail.com"
-              className={styles['home-link']}
-            >
-              Gmail
-            </a>
-            .
-          </p>
-          <p className="flex items-center">
-            <span className="pr-1">Socials:</span>
-            <SocialLink
-              Icon={GithubIcon}
-              href={'https://github.com/songhn233'}
-              title={'Github Profile'}
-              label={'Github'}
-              className="bg-violet-600/20 hover:bg-violet-500/10"
-            />
-            <SocialLink
-              Icon={ZhiIcon}
-              href={'https://www.zhihu.com/people/song-nan-80-71'}
-              title={'Zhihu Profile'}
-              label={'Zhihu'}
-              className="bg-blue-600/20 hover:bg-blue-600/10"
-            />
-            <SocialLink
-              Icon={BlogIcon}
-              href={'https://blog.songhn.com'}
-              title={'Blog'}
-              label={'Blog'}
-              className="bg-orange-600/20 hover:bg-orange-600/10"
-            />
-          </p>
-        </article>
+        <FadeInBox>
+          <article>
+            <p className="mt-6 lg:mt-8">
+              Hey, I am a junior at 🎓{' '}
+              <abbr
+                title="Hangzhou Dianzi University"
+                className="decoration-wavy decoration-info"
+              >
+                HDU
+              </abbr>
+              , majoring in 🖥 Computer Science. Ex-intern at{' '}
+              <strong>ByteDance</strong>.
+            </p>
+            <p>
+              I work mostly with React & Typescript, and in spare time, trying
+              to learn Rust or Golang. My focus as an amateur is on{' '}
+              <strong>📈 Data visualization</strong> and{' '}
+              <strong>⚙️ Static site generation</strong>. You might be
+              interested in{' '}
+              <a
+                className={styles['home-link']}
+                href="https://github.com/theme-kaze/hexo-theme-kaze"
+                title="Theme Kaze"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Kaze
+              </a>
+              , a modern blog theme for Hexo.
+            </p>
+            <p>
+              Outside of programming, hobbies are barren. Anime and Vtubers are
+              the main form of entertainment (so sad 😢). Trying to change
+              things, maybe...
+            </p>
+            <hr className="mx-auto !my-7 w-20" />
+            <p>
+              Want to contact me? Mail me at{' '}
+              <MailIcon className="inline-block" />{' '}
+              <a
+                href="mailto:songhn233@gmail.com"
+                className={styles['home-link']}
+              >
+                Gmail
+              </a>
+              .
+            </p>
+            <p className="flex items-center">
+              <span className="pr-1">Socials:</span>
+              <SocialLink
+                Icon={GithubIcon}
+                href={'https://github.com/songhn233'}
+                title={'Github Profile'}
+                label={'Github'}
+                className="bg-violet-600/20 hover:bg-violet-500/10"
+              />
+              <SocialLink
+                Icon={ZhiIcon}
+                href={'https://www.zhihu.com/people/song-nan-80-71'}
+                title={'Zhihu Profile'}
+                label={'Zhihu'}
+                className="bg-blue-600/20 hover:bg-blue-600/10"
+              />
+              <SocialLink
+                Icon={BlogIcon}
+                href={'https://blog.songhn.com'}
+                title={'Blog'}
+                label={'Blog'}
+                className="bg-orange-600/20 hover:bg-orange-600/10"
+              />
+            </p>
+          </article>
+        </FadeInBox>
       </main>
       <Footer year={year} />
     </>
