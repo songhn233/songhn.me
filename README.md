@@ -2,31 +2,29 @@
 
 ## Description
 
-👏 Hello, I'm Songhn. This is my personal page.
+👏 Hello, I'm Songhn. This is my profile page.
 
 The page link: [songhn.com](https://songhn.com)
 
 ## Features
 
-- 👤 Display basic personal information
-- 🌍 i18n (zh-CN & en support)
-- ♿️ Well-accessible motion
-- 📣 Web share api (include polyfill)
+- 👤 Display profile and social links
+- ♿️ Well-accessible navigation
 - 🌒 Dark mode support
 
-## Todo (Maybe)
+## Todo
 
-- [ ] Sync introduction markdown from gist or other sources
-- [ ] Information display in the form of question and answer
-- [ ] Move content to json files
+- [ ] native blog page
+- [ ] i18n (zh-CN & en support)
+- [ ] more animation such as type, wave, etc.
+- [ ] Web share api (include polyfill)
 - [ ] Add more features...
 
 ## Attribution
 
 Special thanks to the following projects.
 
-- [Vitesse](https://github.com/antfu/vitesse) - Vite starter template
-- [aos](https://github.com/michalsnik/aos) - Animate on scroll
-- [share-api-polyfill](https://github.com/on2-dev/share-api-polyfill) - Share api polyfill
-- [error404.fun](https://error404.fun/) - free illustrations for 404 page
-- [loading.io](https://loading.io/) - Pure CSS loaders
+- [Next.js](https://github.com/vercel/next.js) - A framework for server-rendered React applications
+- [Framer Motion](https://github.com/framer/framer-motion) - A library for building React components that animate
+- [designstripe](https://designstripe.com/) - A free tool for creating beautiful illustrations
+- [Vercel](https://vercel.com/) - A free hosting platform for static websites
