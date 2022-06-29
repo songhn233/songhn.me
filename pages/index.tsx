@@ -22,14 +22,14 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
       <Navbar />
       <main className="container mx-auto my-8 prose px-7 lg:px-8">
         <div className="flex items-center justify-center">
-          <div className="w-16 h-16 overflow-hidden rounded-full shadow-md shadow-dark-900 dark:shadow-light-900">
+          <div className="w-12 h-12 overflow-hidden rounded-full shadow-md sm:w-16 sm:h-16 shadow-dark-900 dark:shadow-light-900">
             <Image
               src={MyAvatar}
               alt="Avatar"
               placeholder="blur"
               priority
-              width={80}
-              height={80}
+              width={128}
+              height={128}
               draggable={false}
             />
           </div>
@@ -100,7 +100,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
             .
           </p>
           <p className="flex items-center">
-            <span className="pr-1">Social links:</span>
+            <span className="pr-1">Socials:</span>
             <SocialLink
               Icon={GithubIcon}
               href={'https://github.com/songhn233'}
