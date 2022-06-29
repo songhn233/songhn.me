@@ -2,7 +2,7 @@ import { SVGProps } from 'react';
 import { useDark } from '../hooks/useDark';
 
 export default function DarkModeToggle() {
-  const [_, toggleDark] = useDark();
+  const [toggleDark] = useDark();
   return (
     <button className="btn btn-ghost btn-circle" onClick={() => toggleDark()}>
       <DarkModeIcon className="w-5 h-5" />

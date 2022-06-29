@@ -1,33 +1,70 @@
-import React, { SVGProps } from 'react';
+import Head from 'next/head';
+import React from 'react';
 import DarkModeToggle from './DarkModeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   return (
-    <nav className="navbar bg-base-100">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost btn-circle">
-            <DropdownIcon />
-          </label>
-          <ul className="p-2 mt-3 shadow dropdown-content menu rounded-box menu-compact w-52 bg-base-100">
-            <li>
-              <a tabIndex={0}>Homepage</a>
-            </li>
-            <li>
-              <a href="https://blog.songhn.com" rel="noopener" tabIndex={0}>
-                Blog
-              </a>
-            </li>
-          </ul>
+    <>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const modeMap = {
+                  light: 'light',
+                  dark: 'halloween',
+                }
+                let theme;
+                function setTheme(newTheme) {
+                  window.__theme = newTheme;
+                  theme = newTheme;
+                  document.documentElement.setAttribute('data-theme', newTheme);
+                }
+                window.__setTheme = function(newTheme) {
+                  setTheme(newTheme);
+                  try {
+                    localStorage.setItem('theme', newTheme);
+                  } catch (err) {}
+                }
+                try {
+                  theme = localStorage.getItem('theme');
+                } catch (err) { }
+                const mediaPrefer = window.matchMedia('(prefers-color-scheme: dark)');
+                mediaPrefer.addListener(function(e) {
+                  setTheme(e.matches ? modeMap.dark : modeMap.light)
+                });
+                setTheme(theme || (mediaPrefer.matches ? modeMap.dark : modeMap.light));
+              })();
+            `,
+          }}
+        />
+      </Head>
+      <nav className="navbar bg-base-100">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost btn-circle">
+              <DropdownIcon />
+            </label>
+            <ul className="p-2 mt-3 shadow dropdown-content menu rounded-box menu-compact w-52 bg-base-100">
+              <li>
+                <a tabIndex={0}>Homepage</a>
+              </li>
+              <li>
+                <a href="https://blog.songhn.com" rel="noopener" tabIndex={0}>
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a className="text-xl normal-case btn btn-ghost">Songhn Site</a>
         </div>
-        <a className="text-xl normal-case btn btn-ghost">Songhn Site</a>
-      </div>
-      <div className="navbar-end">
-        <LanguageSwitcher />
-        <DarkModeToggle />
-      </div>
-    </nav>
+        <div className="navbar-end">
+          <LanguageSwitcher />
+          <DarkModeToggle />
+        </div>
+      </nav>
+    </>
   );
 }
 

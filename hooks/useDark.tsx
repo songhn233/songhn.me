@@ -1,20 +1,8 @@
-import { useState } from 'react';
-
-const isDarkDefault = (): boolean =>
-  typeof window !== 'undefined' &&
-  (window.localStorage.theme === 'dark' ||
-    (!('theme' in window.localStorage) &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches));
+import { useEffect, useState } from 'react';
 
 export function useDark() {
-  const [isDark, setIsDark] = useState(isDarkDefault());
   const toggleDark = () => {
-    setIsDark(!isDark);
-    window.localStorage.theme = isDark ? 'light' : 'halloween';
-    document.documentElement.setAttribute(
-      'data-theme',
-      isDark ? 'light' : 'halloween',
-    );
+    window.__setTheme(window.__theme === 'light' ? 'halloween' : 'light');
   };
-  return [isDark, toggleDark] as const;
+  return [toggleDark] as const;
 }
