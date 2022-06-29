@@ -49,7 +49,14 @@ export default function Navbar() {
             </label>
             <ul className="p-2 mt-3 shadow dropdown-content menu rounded-box menu-compact w-52 bg-base-100">
               <li>
-                <a tabIndex={0}>Homepage</a>
+                <a
+                  tabIndex={0}
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                >
+                  Homepage
+                </a>
               </li>
               <li>
                 <a

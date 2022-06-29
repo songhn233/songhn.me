@@ -21,7 +21,7 @@ export function SocialLink({
   return (
     <a
       className={cx(
-        'mx-1 inline-flex items-center rounded-md px-2 py-1 text-sm text-base-content no-underline',
+        'mx-1 inline-flex items-center rounded-md px-2 py-1 text-sm text-base-content/80 no-underline hover:text-base-content/60',
         className,
       )}
       href={href}

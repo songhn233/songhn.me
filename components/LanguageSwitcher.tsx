@@ -5,7 +5,14 @@ export default function LanguageSwitcher() {
   return (
     <button
       className="btn btn-ghost btn-circle"
-      onClick={() => toast('🚧 Working In Progress')}
+      onClick={() =>
+        toast('🚧 Working In Progress', {
+          style: {
+            backgroundColor: 'hsl(var(--b1))',
+            color: 'hsl(var(--bc))',
+          },
+        })
+      }
       aria-label="Language Switcher"
     >
       <LanguageIcon className="w-5 h-5" />
