@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import DarkModeToggle from './DarkModeToggle';
@@ -41,6 +42,12 @@ export default function Navbar() {
           }}
         />
       </Head>
+      {
+        <Script
+          data-domain="songhn.com"
+          src="https://ava.nana7mi.cc/js/plausible.js"
+        />
+      }
       <nav className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
