@@ -73,8 +73,8 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
               <strong>ByteDance</strong> after 🎓.
             </p>
             <p>
-              I work mostly with 🪄 React & Typescript, and in spare time, trying
-              to learn 🦀️ Rust or Golang. My focus as an amateur is on{' '}
+              I work mostly with React & Typescript, and in spare time, trying
+              to learn Rust or Golang. My focus as an amateur is on{' '}
               <strong>📈 Data visualization</strong> and{' '}
               <strong>⚙️ Static site generation</strong>. You might be
               interested in{' '}
