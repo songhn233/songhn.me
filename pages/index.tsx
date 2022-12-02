@@ -62,7 +62,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
         <FadeInBox>
           <article>
             <p className="mt-6 lg:mt-8">
-              Hey, I am a junior at 🏫{' '}
+              Hey, I am a junior at{' '}
               <abbr
                 title="Hangzhou Dianzi University"
                 className="decoration-wavy decoration-info"
@@ -90,7 +90,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
               , a modern blog theme for Hexo.
             </p>
             <p>
-              Outside of programming, hobbies are barren. Anime and Vtubers are
+              Outside of programming, hobbies are barren. Anime and Nana7mi are
               the main form of entertainment (so sad 😢). Trying to change
               things, maybe...
             </p>
