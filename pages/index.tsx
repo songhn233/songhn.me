@@ -62,15 +62,15 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
         <FadeInBox>
           <article>
             <p className="mt-6 lg:mt-8">
-              Hey, I am a junior at 🎓{' '}
+              Hey, I am a junior at 🏫{' '}
               <abbr
                 title="Hangzhou Dianzi University"
                 className="decoration-wavy decoration-info"
               >
                 HDU
               </abbr>
-              , majoring in 🖥 Computer Science. Ex-intern at{' '}
-              <strong>ByteDance</strong>.
+              , majoring in Computer Science. Will join{' '}
+              <strong>ByteDance</strong> after 🎓.
             </p>
             <p>
               I work mostly with React & Typescript, and in spare time, trying
