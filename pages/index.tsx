@@ -62,7 +62,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
         <FadeInBox>
           <article>
             <p className="mt-6 lg:mt-8">
-              Hey, I am a junior at{' '}
+              Hey, I am a senior at{' '}
               <abbr
                 title="Hangzhou Dianzi University"
                 className="decoration-wavy decoration-info"
@@ -73,8 +73,8 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
               <strong>ByteDance</strong> after 🎓.
             </p>
             <p>
-              I work mostly with React & Typescript, and in spare time, trying
-              to learn Rust or Golang. My focus as an amateur is on{' '}
+              I work mostly with 🪄 React & Typescript, and in spare time, trying
+              to learn 🦀️ Rust or Golang. My focus as an amateur is on{' '}
               <strong>📈 Data visualization</strong> and{' '}
               <strong>⚙️ Static site generation</strong>. You might be
               interested in{' '}
@@ -90,7 +90,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
               , a modern blog theme for Hexo.
             </p>
             <p>
-              Outside of programming, hobbies are barren. Anime and Nana7mi are
+              Outside of programming, hobbies are barren. Anime and 🦈 Nana7mi are
               the main form of entertainment (so sad 😢). Trying to change
               things, maybe...
             </p>
