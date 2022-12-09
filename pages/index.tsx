@@ -90,7 +90,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
               , a modern blog theme for Hexo.
             </p>
             <p>
-              Outside of programming, hobbies are barren. Anime and 🦈 Nana7mi are
+              Outside of programming, hobbies are barren. 🦈 Nana7mi and Anime are
               the main form of entertainment (so sad 😢). Trying to change
               things, maybe...
             </p>
