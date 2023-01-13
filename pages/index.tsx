@@ -26,15 +26,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
         <div className="flex items-center justify-center">
           <ScaleBox>
             <div className="w-12 h-12 overflow-hidden rounded-full shadow-md sm:w-16 sm:h-16 shadow-dark-900 dark:shadow-light-900">
-              <Image
-                src={MyAvatar}
-                alt="Avatar"
-                placeholder="blur"
-                priority
-                width={128}
-                height={128}
-                draggable={false}
-              />
+              <Image src={MyAvatar} alt="Avatar" priority draggable={false} />
             </div>
           </ScaleBox>
 
