@@ -68,18 +68,7 @@ const Home: NextPage<{ year: string }> = ({ year }) => {
               I work mostly with React & Node.js, and in spare time, trying
               to learn Rust or Golang. My focus as an amateur is on{' '}
               <strong>📈 Data visualization</strong> and{' '}
-              <strong>⚙️ Static site generation</strong>. You might be
-              interested in{' '}
-              <a
-                className={styles['home-link']}
-                href="https://github.com/theme-kaze/hexo-theme-kaze"
-                title="Theme Kaze"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Kaze
-              </a>
-              , a modern blog theme for Hexo.
+              <strong>⚙️ Static site generation</strong>. In terms of work, currently focused on 🐳 Observability and DevOps areas
             </p>
             <p>
               Outside of programming, hobbies are barren. 🦈 Nana7mi and Anime are
